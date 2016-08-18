@@ -8,6 +8,7 @@ import getPreferences from '../actions/getPreferences'
 import Slider from '../components/preferenceSlider'
 import fetchScores from '../actions/fetchScores'
 import Address from '../components/address'
+import { browserHistory } from 'react-router'
 
 const categories = ['Safety', 'Education', 'Transportation', 'Parks', 'Rent'];
 const PreferencesSlidersContainer = class extends Component {
@@ -20,11 +21,11 @@ const PreferencesSlidersContainer = class extends Component {
       preferences[category] = value
     }
     getPreferences(preferences)
-
     fetchScores(this.props.address.address)
+    browserHistory.push('/results')
   }
   render() {
-
+    
     return(
       <div>
         <Address text={this.props.address.address}/>
@@ -51,7 +52,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
-  return {address: state.address}
+  return {address: state.address, preferences: state.preferences}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PreferencesSlidersContainer)

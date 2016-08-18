@@ -7,9 +7,8 @@ import ScoresResult from './containers/ScoresResult'
 const Routes = (
   <Router>
     <Route path="/" component={SubmitAddressContainer} />
-    <Route path="/preferences" component={PreferencesSliderContainer}>
-      <Route path="/results" component={ScoresResult} />
-    </Route>
+    <Route path="/preferences" component={PreferencesSliderContainer} />
+    <Route path="/results" component={ScoresResult} />
   </Router>
 )
 

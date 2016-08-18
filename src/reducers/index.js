@@ -1,13 +1,11 @@
 import { combineReducers } from 'redux';
 import searchReducer from './searchReducer'
+import scoresReducer from './scoresReducer'
 
 // Mapping of state
 const rootReducer = combineReducers({
-  address: searchReducer
-  // crimes: CrimesReducer,
-  // parks: ParksReducer,
-  // schools: SchoolsReducer,
-  // subways: SubwaysReducer
+  address: searchReducer,
+  preferences: scoresReducer
 });
 
 export default rootReducer;
