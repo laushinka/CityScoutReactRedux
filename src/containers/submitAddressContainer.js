@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import getAddress from '../actions/getAddress'
 import {browserHistory} from 'react-router'
 import fetchScores from '../actions/fetchScores'
+import Geosuggest from 'react-geosuggest';
 
 var text;
 class SubmitAddressContainer extends Component {
