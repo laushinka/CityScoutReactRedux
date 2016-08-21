@@ -41,7 +41,8 @@ const ScoresResult = class extends Component {
       <div>
         {this.renderModal('accidents')}
         <div className="container-fluid">
-          <button onClick={this.handleAccidentCategoryClick.bind(this)}>Simulate click on accidents</button>
+          {/* Trying out a button */}
+          <button onClick={this.handleAccidentCategoryClick.bind(this)}>Show accidents details</button>
           <div className="row" id="chartsBox">
             <TotalScoreBox className="col-md-12" totalScore={totalScore} />
             <div className='col-md-4'>
@@ -64,12 +65,10 @@ const ScoresResult = class extends Component {
   renderModal(category) {
     if (this.props.modals === `DETAILS_MODAL_${category}`) {
       return (<Modal scores={this.props.scores}  />)
-
     }
   }
 
   handleAccidentCategoryClick() {
-    // pass in different category
     this.props.openModal('DETAILS_MODAL', 'accidents')
   }
 };
