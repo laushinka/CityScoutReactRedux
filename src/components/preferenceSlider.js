@@ -11,7 +11,7 @@ const Slider = class extends Component {
   render() {
     return(
       <div className="sliders-form">
-          <input id={this.props.id} type="range" default="5" data-slider-min="0" max="10" data-slider-step="1" onChange={this.showValue}/>
+          <input id={this.props.id} type="range" default="5" min="1" max="10" data-slider-step="1" onChange={this.showValue}/>
           <span id={this.props.id + "span"}>5</span>
       </div>
     )
