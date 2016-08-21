@@ -1,15 +1,13 @@
-export const DETAILS_MODAL = 'DETAILS_MODAL'
-
-export function openModal(modalType, key) {
+export function openModal(modalType, category) {
   return {
     type: 'OPEN_MODAL',
-    payload: { type: modalType, key }
+    payload: { type: modalType, category }
   }
 }
 
-export function closeModal(modalType, key) {
+export function closeModal(modalType, category) {
   return {
     type: 'CLOSE_MODAL',
-    payload: { type: modalType, key }
+    payload: { type: modalType, category }
   }
 }
