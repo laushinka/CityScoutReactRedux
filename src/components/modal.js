@@ -17,7 +17,7 @@ export default class Modal extends Component {
       right: 0,
       bottom: 0,
       background: 'red',
-      zIndex: 1
+      zIndex: 0.5
     }
   }
 }
