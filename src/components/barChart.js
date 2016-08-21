@@ -14,7 +14,7 @@ export default function barChart(chart, keys, averages, scores) {
       labels: keys,
       datasets: [
         {
-            label: "NYC Average", //optional
+            label: "Neighborhood Scores", //optional
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
@@ -29,15 +29,15 @@ export default function barChart(chart, keys, averages, scores) {
             ],
             highlightFill: "rgba(220,220,220,0.75)",
             highlightStroke: "rgba(220,220,220,1)",
-            data: nyc_avg_vals // y-axis
+            data: neigborhood_scores // y-axis
         },
 		{
-            label: "Neighborhood Scores", //optional
+            label: "NYC Average", //optional
             fillColor: "rgba(220,120,220,0.8)",
             strokeColor: "rgba(220,120,220,0.8)",
             highlightFill: "rgba(220,220,220,0.75)",
             highlightStroke: "rgba(220,220,220,1)",
-            data: neigborhood_scores
+            data: nyc_avg_vals
         }
     ]
     },
