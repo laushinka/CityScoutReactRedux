@@ -16,8 +16,8 @@ export default class Modal extends Component {
       left: 0,
       right: 0,
       bottom: 0,
-      background: 'red',
-      zIndex: 0.5
+      background: 'rgb(255, 204, 204)',
+      zIndex: 1
     }
   }
 }
